@@ -13,6 +13,7 @@ import pic12 from '../Component/assets/13.png'
 import pic15 from '../Component/assets/yt.png'
 import picins from '../Component/assets/insta.png'
 import picw from '../Component/assets/whats.png'
+import swal from 'sweetalert'
 
 
 import About2 from './About.css'
@@ -28,23 +29,23 @@ function About(){
       
 
     if (document.getElementById("blank").value==('')) {
-      document.getElementById("blank").style.backgroundColor =  "orange" ;
-        alert("please fill up")
+      document.getElementById("blank").style.backgroundColor =  "red" ;
+       swal ( "Oops" ,  "Please Fill this!" ,  "error" )
       
         return false;
 
     } 
   
     if (document.getElementById("blank2").value==('')) {
-      document.getElementById("blank2").style.backgroundColor =  "orange" ;
-        alert("please fill up")
+      document.getElementById("blank2").style.backgroundColor =  "red" ;
+       swal ( "Oops" ,  "Please Fill this!" ,  "error" )
 
         return false;
 
     } 
      
     else{
-        alert("Thank you")
+      swal("Thank You!", "You clicked the button!", "success");
     }
 
           
